@@ -4,25 +4,25 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url(/bgbearing.jpg)',
+          backgroundImage: 'url(/bgbearing.webp)',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:pl-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 pl-16 md:pl-20">
         <div className="max-w-5xl">
-          <h1 className="text-7xl md:text-8xl font-bold text-white leading-tight">
-            Engineering 
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
+            Engineering
           </h1>
-          <h2 className="text-6xl md:text-7xl font-bold text-white leading-tight mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mt-2">
             Reliability in
           </h2>
-           <h3 className="text-6xl md:text-7xl font-bold text-white leading-tight mt-2">
+           <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mt-2">
             Every Revolution
           </h3>
 
-          <div className="mt-16 flex flex-wrap gap-4">
+          <div className="mt-8 md:mt-16 flex flex-col sm:flex-row flex-wrap gap-4">
             <a
               href="#products"
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all hover:shadow-lg"

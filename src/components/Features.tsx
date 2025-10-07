@@ -30,12 +30,12 @@ const Features = () => {
 
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:pl-20">
+      <div className="max-w-7xl mx-auto px-6 pl-16 md:pl-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Why Choose Dual Scope Engineering
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             We combine quality products with exceptional service to keep your
             operations running at peak performance
           </p>

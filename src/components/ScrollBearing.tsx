@@ -48,7 +48,7 @@ const ScrollBearing = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 left-6 z-10 pointer-events-none hidden md:block">
+    <div className="fixed bottom-6 left-4 md:left-6 z-10 pointer-events-none">
       <div
         ref={bearingRef}
         className="relative w-8 h-8 transition-transform will-change-transform"

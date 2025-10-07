@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +33,7 @@ const Header = () => {
         isScrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 md:pl-20">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <img
@@ -97,7 +99,77 @@ const Header = () => {
               Talk to Our Team
             </a>
           </nav>
+
+          <button
+            className="md:hidden text-gray-700"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4">
+              <a
+                href="#about"
+                className="text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+
+              <div>
+                <button
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
+                  onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                >
+                  <span>Products</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isMobileProductsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isMobileProductsOpen && (
+                  <div className="pl-8 pr-4 py-2 space-y-2">
+                    {productCategories.map((category, index) => (
+                      <a
+                        key={index}
+                        href={`#${category.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="block text-gray-600 hover:text-red-600 py-2"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {category}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <a
+                href="#team"
+                className="text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </a>
+
+              <a
+                href="#careers"
+                className="text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Careers
+              </a>
+
+              <a
+                href="#contact"
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-colors mx-4 text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Talk to Our Team
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
