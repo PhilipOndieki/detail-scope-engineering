@@ -48,10 +48,10 @@ const ScrollBearing = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-6 left-4 md:left-6 z-10 pointer-events-none">
+    <div className="fixed bottom-4 sm:bottom-6 left-2 sm:left-4 md:left-6 z-10 pointer-events-none">
       <div
         ref={bearingRef}
-        className="relative w-8 h-8 transition-transform will-change-transform"
+        className="relative w-6 h-6 sm:w-8 sm:h-8 transition-transform will-change-transform"
         style={{ transformOrigin: 'center' }}
       >
         <svg

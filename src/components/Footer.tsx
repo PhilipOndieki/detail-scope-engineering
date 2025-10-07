@@ -3,8 +3,8 @@ import { Facebook, Linkedin, Instagram } from 'lucide-react';
 const Footer = () => {
   return (
     <footer className="bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 py-12 pl-16 md:pl-20">
-        <div className="grid md:grid-cols-4 gap-12 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:pl-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-8">
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">
               Dualscope Engineering
@@ -121,12 +121,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+        <div className="border-t border-gray-800 pt-6 sm:pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-xs sm:text-sm">
               © 2025 Dual Scope Engineering Inc.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <a
                 href="#contact"
                 className="text-gray-400 hover:text-white transition-colors text-sm border-b border-transparent hover:border-white"

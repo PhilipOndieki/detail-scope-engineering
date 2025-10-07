@@ -34,13 +34,13 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 md:pl-20">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:pl-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <img
               src="/DUALSCOPE-LOGO-REVISED.png"
               alt="Dual Scope Engineering"
-              className="h-14 w-auto"
+              className="h-10 sm:h-14 w-auto"
             />
           </div>
 
