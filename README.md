@@ -1,1 +1,1 @@
-detail-scope-engineering
+dualscope engineering
