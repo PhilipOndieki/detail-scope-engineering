@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -36,21 +37,21 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto pl-20 pr-6 sm:px-6 md:pl-20">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src="/DUALSCOPE-LOGO-REVISED.png"
               alt="Dual Scope Engineering"
               className="h-10 sm:h-14 w-auto"
             />
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#about"
+            <Link
+              to="/"
               className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
             >
               Home
-            </a>
+            </Link>
 
             <div
               className="relative"
@@ -79,26 +80,26 @@ const Header = () => {
               )}
             </div>
 
-            <a
-              href="#team"
+            <Link
+              to="/about"
               className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
             >
               About
-            </a>
+            </Link>
 
-            <a
-              href="#careers"
+            <Link
+              to="/careers"
               className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
             >
               Careers
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-2.5 rounded font-medium transition-colors"
             >
               Talk to Our Team
-            </a>
+            </Link>
           </nav>
 
           <button
@@ -113,13 +114,13 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <a
-                href="#about"
+              <Link
+                to="/"
                 className="text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
-              </a>
+              </Link>
 
               <div>
                 <button
@@ -145,29 +146,29 @@ const Header = () => {
                 )}
               </div>
 
-              <a
-                href="#team"
+              <Link
+                to="/about"
                 className="text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About
-              </a>
+              </Link>
 
-              <a
-                href="#careers"
+              <Link
+                to="/careers"
                 className="text-gray-700 hover:text-gray-900 font-medium transition-colors px-4 py-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Careers
-              </a>
+              </Link>
 
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded font-medium transition-colors mx-4 text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Talk to Our Team
-              </a>
+              </Link>
             </div>
           </div>
         )}
