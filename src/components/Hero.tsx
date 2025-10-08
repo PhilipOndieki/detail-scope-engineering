@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 md:pl-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-6 py-24 sm:py-32 md:pl-20">
         <div className="max-w-5xl">
           <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight">
             Engineering

@@ -10,12 +10,12 @@ const Partners = () => {
 
   return (
     <section className="py-12 sm:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:pl-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 md:pl-20">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             Trusted Partners
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600">
             We collaborate with industry-leading manufacturers to bring you the best
           </p>
         </div>
